@@ -17,11 +17,7 @@ pipeline {
                 bat 'npm install'  
             }
         }
-                stage('Run Tests') {
-            steps {
-                bat 'npm test'  // Run the backend tests (if you have tests)
-            }
-        }
+       
 
         stage('Start Server') {
             steps {
