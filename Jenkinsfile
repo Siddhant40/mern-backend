@@ -21,7 +21,7 @@ pipeline {
 
         stage('Start Server') {
             steps {
-                bat 'npm start'  // Run your backend server (if it's a production app, this could be a different command)
+                bat 'npm run'  // Run your backend server (if it's a production app, this could be a different command)
             }
         }
 
