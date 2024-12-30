@@ -17,6 +17,17 @@ pipeline {
                 bat 'npm install'  
             }
         }
+                stage('Run Tests') {
+            steps {
+                bat 'npm test'  // Run the backend tests (if you have tests)
+            }
+        }
+
+        stage('Start Server') {
+            steps {
+                bat 'npm start'  // Run your backend server (if it's a production app, this could be a different command)
+            }
+        }
 
         stage('SonarQube Analysis') {
             environment {
@@ -36,17 +47,7 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
-            steps {
-                bat 'npm test'  // Run the backend tests (if you have tests)
-            }
-        }
 
-        stage('Start Server') {
-            steps {
-                bat 'npm start'  // Run your backend server (if it's a production app, this could be a different command)
-            }
-        }
     }
 
     post {
