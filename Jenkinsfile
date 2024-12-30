@@ -36,11 +36,15 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Run Tests') {
             steps {
-                script {
-                    bat 'npm run build'  
-                }
+                bat 'npm test'  // Run the backend tests (if you have tests)
+            }
+        }
+
+        stage('Start Server') {
+            steps {
+                bat 'npm start'  // Run your backend server (if it's a production app, this could be a different command)
             }
         }
     }
