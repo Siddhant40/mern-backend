@@ -24,7 +24,7 @@ pipeline {
         stage('Lint') {
             steps {
                 script {
-                    bat 'npx eslint . --ext .js,.jsx,.ts,.tsx'  // Adjust extensions as needed
+                    bat 'npm run lint'  // Adjust extensions as needed
                 }
             }
         }
