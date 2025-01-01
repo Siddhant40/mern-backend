@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     environment {
+        PATH = "C:\\Program Files\\nodejs;C:\\Users\\91844\\AppData\\Roaming\\npm;${PATH}" // Add Node.js and npm global paths
         SONAR_SCANNER_PATH = 'C:\\Users\\91844\\Downloads\\sonar-scanner-cli-6.2.1.4610-windows-x64\\sonar-scanner-6.2.1.4610-windows-x64\\bin\\sonar-scanner.bat'
     }
 
