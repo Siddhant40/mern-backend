@@ -17,7 +17,14 @@ pipeline {
                 bat 'npm install'  
             }
         }
-       
+
+        stage('Lint') {
+            steps {
+                script {
+                    bat 'npx eslint . --ext .js,.jsx,.ts,.tsx'  // Adjust extensions as needed
+                }
+            }
+        }
 
         stage('Start Server') {
             steps {
@@ -42,8 +49,6 @@ pipeline {
                 }
             }
         }
-
-
     }
 
     post {
