@@ -17,6 +17,7 @@ pipeline {
 
         stage('Install Dependencies - Backend') {
             steps {
+                set  PATH = "C:\\Program Files\\nodejs;C:\\Users\\91844\\AppData\\Roaming\\npm;${PATH}"^
                 bat 'npm install'  
             }
         }
